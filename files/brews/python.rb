@@ -4,14 +4,14 @@ class Python < Formula
   homepage "http://www.python.org"
   head "http://hg.python.org/cpython", :using => :hg, :branch => "2.7"
   url "http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz"
-  sha1 "511960dd78451a06c9df76509635aeec05b2051a"
+  sha256 "511960dd78451a06c9df76509635aeec05b2051a"
   version '2.7.8-boxen1'
 
   bottle do
     revision 2
-    sha1 "f1244c117036a733742f128f8a168dcb0568675d" => :mavericks
-    sha1 "41f27fc515410ff728316e994be6f471520e5c90" => :mountain_lion
-    sha1 "cab018e86b60e5a8a8115581a2aa3390b18b3080" => :lion
+    sha256 "f1244c117036a733742f128f8a168dcb0568675d" => :mavericks
+    sha256 "41f27fc515410ff728316e994be6f471520e5c90" => :mountain_lion
+    sha256 "cab018e86b60e5a8a8115581a2aa3390b18b3080" => :lion
   end
 
   option :universal
@@ -33,12 +33,12 @@ class Python < Formula
 
   resource "setuptools" do
     url "https://pypi.python.org/packages/source/s/setuptools/setuptools-5.4.2.tar.gz"
-    sha1 "a681ba56c30c0eb66528215842d3e3fcb5157614"
+    sha256 "a681ba56c30c0eb66528215842d3e3fcb5157614"
   end
 
   resource "pip" do
     url "https://pypi.python.org/packages/source/p/pip/pip-1.5.6.tar.gz"
-    sha1 "e6cd9e6f2fd8d28c9976313632ef8aa8ac31249e"
+    sha256 "e6cd9e6f2fd8d28c9976313632ef8aa8ac31249e"
   end
 
   # Patch for pyport.h macro issue
@@ -46,7 +46,7 @@ class Python < Formula
   # https://trac.macports.org/ticket/44288
   patch do
     url "http://bugs.python.org/file30805/issue10910-workaround.txt"
-    sha1 "9926640cb7c8e273e4b451469a2b13d4b9df5ba3"
+    sha256 "9926640cb7c8e273e4b451469a2b13d4b9df5ba3"
   end
 
   # Patch to disable the search for Tk.framework, since Homebrew's Tk is
